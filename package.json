@@ -1,0 +1,35 @@
+{
+  "name": "backend-drone-delivery",
+  "version": "0.0.0",
+  "type": "module",
+  "transform": {
+    "^.+\\.js$": "babel-jest"
+  },
+  "private": true,
+  "scripts": {
+    "start": "node app.js",
+    "test": "jest"
+  },
+  "dependencies": {
+    "axios": "^1.5.0",
+    "axios-mock-adapter": "^1.21.5",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "dijkstrajs": "^1.0.3",
+    "dotenv": "^16.3.1",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "jade": "~1.11.0",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "~1.9.1",
+    "queue-fifo": "^0.2.6"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.22.15",
+    "@babel/preset-modules": "^0.1.6",
+    "@types/express": "^4.17.17",
+    "@types/jsonwebtoken": "^9.0.2",
+    "babel-jest": "^29.6.4",
+    "jest": "^29.6.4"
+  }
+}
