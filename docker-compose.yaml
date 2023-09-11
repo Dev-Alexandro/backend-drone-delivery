@@ -2,41 +2,11 @@ version: "2"
 services:
   backend-drone-delivery:
     container_name: backend-drone-delivery
-    
+    #command: bash -c "npm run build && npm run start"
     build: 
      context: .
      dockerfile: Dockerfile
+    volumes:
+      - ./:/usr/src
     ports:
-      - 3001:3000
-    networks:
-      - drone-delivery-network
-
-
-  db-drone-delivery:
-    image: mariadb:10.5
-    container_name: db-drone-delivery
-    ports:
-      - 3390:3306
-    environment:
-      - MARIADB_DATABASE=drone_delivery
-      - MARIADB_ROOT_USER=root
-      - MARIADB_ROOT_PASSWORD=password@123#
-    networks:
-      - drone-delivery-network
-
-networks: 
-  drone-delivery-network:
-    driver: bridge
-
-
-
-
-
-
-
-
-   
-
-
-     
-    
+      - 3001:3001
